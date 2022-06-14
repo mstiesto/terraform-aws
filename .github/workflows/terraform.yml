@@ -22,7 +22,7 @@ jobs:
 
       - name: Terraform Format
         id: fmt
-        run: terraform -chdir="./IAM/" fmt -check
+        run: terraform -chdir="./IAM/" fmt
 
       - name: Terraform Init
         id: init
