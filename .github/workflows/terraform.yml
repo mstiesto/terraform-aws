@@ -14,6 +14,10 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v3
 
+      - name: check TF_API_TOKEN
+        id: check
+        run: echo ${{ secrets.TF_API_TOKEN }}
+
       - name: Setup Terraform
         uses: hashicorp/setup-terraform@v1
         with:
