@@ -20,15 +20,15 @@ jobs:
 
       - name: Terraform Format
         id: fmt
-        run: terraform -chdir="./IAM/" fmt
+        run: terraform fmt
 
       - name: Terraform Init
         id: init
-        run: terraform -chdir="./IAM/" init
+        run: terraform init
       
       - name: Terraform Validate
         id: validate
-        run: terraform -chdir="./IAM/" validate -no-color
+        run: terraform validate -no-color
 
       - uses: actions/github-script@v6
         if: github.event_name == 'pull_request'
